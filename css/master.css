@@ -1,0 +1,14 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+#div-quote{
+  margin: 0 auto;
+}
+
+blockquote{
+  text-align: center;
+}
