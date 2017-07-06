@@ -1,0 +1,32 @@
+FROM ubuntu:14:04
+MAINTAINER yuntjs@gmail.com
+
+#Install nginx
+# Add application repo URL to the default source
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ raring main universe" >> /etc/apt/sources.list
+
+# Update repp
+RUN apt-get update
+
+# Install necessary tools
+RUN apt-get install -y nano vim wget net-tools
+
+# DL and install nginx config file
+RUN apt-get install -y nginx
+
+#After adding the instructions for installing Nginx, let's finish off with configuring Nginx and getting Dockerfile to replace the default configuration file with one we provide during build.
+
+# Remove the default Nginx configuration file
+RUN rm -v /etc/nginx/nginx.conf
+
+# Copy a config file form the current directory
+ADD nginx.conf /etc/nginx/
+
+# Append "daemon off;" to the beginning of the config
+RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+
+EXPOSE 80
+
+# Set the default command to execute
+# when creating a new container
+CMD service nginx start
