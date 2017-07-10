@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var url = 'http://192.168.99.201:3000/api'
+  var url = 'http://' + window.location.hostname + ':3000/api'
   $.ajax({
     xhrFields: {
         withCredentials: true
