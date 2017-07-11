@@ -11,9 +11,6 @@ jobs:
 
     working_directory: /go/src/github.com/yuntjs/quotes_ui
 
-    environment:
-      - TAG=0.1.$CIRCLE_BUILD_NUM
-
     steps:
       - checkout
       # ... steps for building/testing app ...
