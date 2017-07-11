@@ -34,5 +34,4 @@ jobs:
           docker push taejunyun/quotesui:$TAG
 
       - run:
-        command: |
-          ./deploy.sh
+        command: ./deploy.sh
