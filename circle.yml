@@ -32,3 +32,8 @@ jobs:
           docker build -t   taejunyun/quotesui:$TAG .      # (3)
           docker login -u $DOCKER_USER -p $DOCKER_PASS         # (4)
           docker push taejunyun/quotesui:$TAG
+
+      - run:
+        name: Deploy
+        command: |
+          ./deploy.sh
