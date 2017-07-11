@@ -1,5 +1,6 @@
 #!/bin/bash
 ssh -o "StrictHostKeyChecking no" docker@ec2-52-14-238-30.us-east-2.compute.amazonaws.com
+sudo apk update
 sudo apk add git
 git clone https://github.com/yuntjs/quotes_ui.git
 git clone https://github.com/yuntjs/quotes_api.git
