@@ -106,3 +106,7 @@ blockquote{
   flex-direction: column;
   justify-content: center;
 }
+
+.error-color{
+  background-color: #d9534f;
+}

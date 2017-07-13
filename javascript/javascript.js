@@ -93,4 +93,32 @@ $(document).ready(function(){
     });
   });
 
+  $('.quote-divs').on('click','input#submit', function(e){
+    e.preventDefault();
+    url = 'http://' + window.location.hostname + ':9000/api/quotes';
+    var content = $('input#user-content').val();
+    var author = $('input#user-author').val();
+    var data = {content: content, author: author}
+
+    $.ajax({
+      data: data,
+      crossDomain: true,
+      method: 'Post',
+      url: url,
+      success: function(response){
+        console.log('Successfully Generated')
+        $('input#user-content').val('');
+        $('input#user-author').val('');
+        $('input#submit').removeClass('error-color');
+      },
+      error: function(err){
+        console.log("error!");
+        $('input#user-content').val('');
+        $('input#user-author').val('');
+        $('input#submit').addClass('error-color');
+      }
+    })
+
+  });
+
 });
