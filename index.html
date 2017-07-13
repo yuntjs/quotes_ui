@@ -3,17 +3,60 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" href="css/master.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="javascript/javascript.js"></script>
   </head>
   <body>
-    <div class="div-quote">
-      <blockquote>
-        <p>Quote:</p>
-        <p id="content"></p>
-        <footer>- <span id="author"></span></footer>
-      </blockquote>
-    </div>
+
+<div class="layout">
+
+  <div class="back-button">
+    <span id="back" class="glyphicon glyphicon-triangle-left center large" aria-hidden="true"></span>
+  </div>
+
+  <div class="">
+    <section>
+      <div id="choose-comp" class="choice center">
+        <p>Get Random Quote</p>
+      </div>
+      <div class="div-quote center thin">
+        <blockquote>
+          <p>Quote:</p>
+          <p id="content"></p>
+          <footer><span id="author"></span></footer>
+        </blockquote>
+        <button id="quote" class="ref-button">Refresh</button>
+      </div>
+    </section>
+
+    <section>
+      <div id="choose-user" class="choice center">
+        <p>Get User Gen Quote</p>
+      </div>
+      <div class="div-user-quote center">
+        <blockquote>
+          <p>User Generated Quote:</p>
+          <p id="user-content"></p>
+          <footer><span id="user-author"></span></footer>
+        </blockquote>
+        <button id="quote-user" class="ref-button">Refresh User Generated</button>
+        <form class="user-input" action="/api/quotes" method="post">
+          <label for="user-content">Enter quote</label>
+          <input type="text" name="content" id="user-content">
+          <label for="user-author">Your name</label>
+          <input type="text" name="author" id="user-author">
+          <input type="submit" value="QuoteIt">
+        </form>
+      </div>
+    </section>
+  </div>
+
+</div>
+
   </body>
 </html>

@@ -5,12 +5,12 @@ body{
   height: 100vh;
 }
 
-#div-quote{
-  margin: 0 auto;
-}
-
 blockquote{
   text-align: center;
+}
+
+.div-quote{
+  margin: 0 auto;
 }
 
 #content{
@@ -24,4 +24,86 @@ blockquote{
 
 #author{
   font-size: 20px;
+}
+
+.center{
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.thin{
+  width: 300px;
+}
+
+.hide{
+  display: none;
+}
+
+.user-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form{
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 500px;
+}
+
+form input{
+  margin-bottom: 15px;
+}
+
+section{
+  text-align: center;
+}
+
+blockquote{
+  border-left: none;
+}
+
+.ref-button{
+  width: 150px;
+  margin: 0 auto;
+}
+
+.large{
+  font-size: 100px;
+}
+
+.large:hover{
+  cursor: crosshair;
+}
+
+.choice{
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: #428bca;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.choice:hover{
+  background-color: #5cb85c;
+  cursor: crosshair;
+}
+
+.layout{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.back-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
