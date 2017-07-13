@@ -54,4 +54,21 @@ $(document).ready(function(){
     $('.back-button').fadeIn();
   });
 
+  $('.quote-divs').on('click', 'button',function(e){
+      $.ajax({
+        xhrFields: {
+            withCredentials: true
+        },
+        contentType: 'application/json',
+        dataType: 'json',
+        crossDomain: true,
+        method: 'Get',
+        url: url
+      })
+      .done(function(response){
+        $('#content').html(response.content);
+        $('#author').html(response.author);
+      });
+  })
+
 });

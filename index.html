@@ -19,7 +19,7 @@
     <span id="back" class="glyphicon glyphicon-triangle-left center large" aria-hidden="true"></span>
   </div>
 
-  <div class="">
+  <div class="quote-divs">
     <section>
       <div id="choose-comp" class="choice center">
         <p>Get Random Quote</p>
@@ -30,7 +30,7 @@
           <p id="content"></p>
           <footer><span id="author"></span></footer>
         </blockquote>
-        <button id="quote" class="ref-button">Refresh</button>
+        <button id="quote-refresh" class="ref-button">Refresh</button>
       </div>
     </section>
 
@@ -44,7 +44,8 @@
           <p id="user-content"></p>
           <footer><span id="user-author"></span></footer>
         </blockquote>
-        <button id="quote-user" class="ref-button">Refresh User Generated</button>
+        <button id="quote-user-refresh" class="ref-button">Refresh User Generated</button>
+
         <form class="user-input" action="/api/quotes" method="post">
           <label for="user-content">Enter quote</label>
           <input type="text" name="content" id="user-content">
