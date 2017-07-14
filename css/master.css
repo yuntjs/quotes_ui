@@ -107,6 +107,10 @@ blockquote{
   justify-content: center;
 }
 
+.back-button:hover{
+  background-color: white;
+}
+
 .error-color{
   background-color: #d9534f;
 }
